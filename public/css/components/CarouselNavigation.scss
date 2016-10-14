@@ -1,0 +1,116 @@
+
+.carousel-navigation {
+  background-color: $pink;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+
+    .carousel-navigation-default {
+      position: absolute;
+      top: 38px;
+      width: 5%;
+      font-size: 20px;
+      color: $white;
+      cursor: pointer;
+    }
+
+    .carousel-navigation-left {
+      @extend .carousel-navigation-default;
+      left: 0px;
+
+    }
+
+    .carousel-navigation-right {
+      @extend .carousel-navigation-default;
+      right: 0px;
+    }
+
+    .carousel-navigation-items {
+      margin: 0px auto;
+
+      li {
+        position: relative;
+        float: left;
+        cursor: pointer;
+        overflow: hidden;
+        width: 55px;
+        height: 55px;
+
+
+        >span:not(.carousel-navigation-line) {
+          float: left;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+
+          color: $white;
+          text-align: center;
+          line-height: 32px;
+          z-index: 9999999;
+        }
+
+
+
+      }
+
+      .below-current-index {
+        > span {
+          background-color: $green;
+          margin-top: 15px;
+        }
+        .carousel-navigation-line {
+          position: absolute;
+          width: 50%;
+          top: 50%;
+          border-bottom: 3px solid $green;
+          height:1px;
+          right: 0px;
+        }
+      }
+
+      .current-index {
+
+
+        > span {
+          background-color: $green;
+          box-shadow: 0 0 0 3px $green;
+          border: 3px solid $pink;
+          margin-left: 3px;
+          margin-top: 10px;
+        }
+
+        .carousel-navigation-line {
+          position: absolute;
+          width: 50%;
+          top: 50%;
+          border-bottom: 3px solid $green;
+          height:1px;
+          right: 0px;
+        }
+      }
+
+      .after-current-index {
+        > span {
+          border: 1px solid $white;
+          margin-top: 14px;
+        }
+
+        .carousel-navigation-line {
+          position: absolute;
+          width: 43%;
+          top: 50%;
+          border-bottom: 1px solid $white;
+          height:1px;
+          right: 0px;
+        }
+      }
+
+    }
+  }
+}

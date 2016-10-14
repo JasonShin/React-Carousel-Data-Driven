@@ -1,0 +1,32 @@
+/* Main style file to import all
+Table of Contents
+1. Settings
+  1.1 globals
+  1.2 colors
+2. Generics
+
+3. Elements
+
+4. Components
+*/
+
+/* 1. Settings START */
+@import "settings/globals";
+/* 1. Settings END */
+
+/* 2. Generic START */
+@import "generic/reset";
+/* 2. Generic END */
+
+/* 3. Elements STARTS */
+@import "elements/headers";
+/* 3. Elements ENDS */
+
+
+/* 4. Components STARTS */
+@import "components/Navigation";
+@import "components/Carousel";
+@import "components/CarouselNavigation";
+@import "components/Slide";
+@import "components/Footer";
+/* 4. Components ENDS */

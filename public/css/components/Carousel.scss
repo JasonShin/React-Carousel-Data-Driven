@@ -1,0 +1,35 @@
+@import "../settings/animation";
+@import "../settings/colours";
+$slide_height: 500px;
+
+.carousel {
+  min-height: $slide_height;
+
+
+  .slick-slider {
+    padding-top: 20px;
+
+    .slick-list {
+      padding-bottom: 10px !important; //Ensures drop shadow on each slider is visible. Important is used to override existing Slick Slider padding
+    }
+
+    .slick-slide {
+      margin-top: 15px;
+      .slide-item {
+        padding-top: 10px;
+      }
+    }
+
+    .slick-slide.slick-center {
+      margin-top: 0px;
+      .slide-item {
+        padding-top: 0px;
+        .slide-meta-container {
+          padding: 20px;
+        }
+      }
+    }
+
+  }
+
+}

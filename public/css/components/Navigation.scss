@@ -1,0 +1,35 @@
+@import "../settings/colours";
+
+#Navigation {
+
+  min-height: 100px;
+  width: 100%;
+  background-color: $pink;
+  color: white;
+
+  .navigation-top-wrapper {
+    overflow: hidden;
+    padding-top: 20px;
+
+    .burger-menu {
+      float: left;
+      width: 10%;
+      text-align: center;
+    }
+
+    .page-title {
+      float:left;
+      width: 80%;
+      text-align: center;
+    }
+
+    .avatar {
+      float: left;
+      width: 10%;
+      text-align: center;
+    }
+
+  }
+
+
+}

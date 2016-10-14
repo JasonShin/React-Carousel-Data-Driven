@@ -1,0 +1,75 @@
+@import "../settings/colours";
+
+.slide-item {
+  position: relative;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 40px;
+  box-shadow: 0 0 5px #ccc;
+
+  .slide-background {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background-color: #8c88ff;
+    z-index: -9999;
+    top: -420px;
+    left: -100px;
+    transform: rotate(80deg);
+  }
+
+  .slide-meta-container {
+    color: $white;
+
+    .slide-meta-details {
+      width: 80%;
+      height: 200px;
+      padding-top: 100px;
+      margin: 0px auto;
+      text-align: center;
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .lets-go-button {
+    background-color: $green;
+    color: $white;
+    text-align: center;
+    padding: 20px 40px 20px 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    width: 40%;
+    margin: 0px auto;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+
+  .slide-tick-box {
+    margin-top: 20px;
+    i {
+      border: 3px solid $white;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      line-height: 40px;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+
+
+  .complete {
+    background-color: $green;
+  }
+
+  .incomplete {
+    background-color: $pink;
+  }
+
+}
