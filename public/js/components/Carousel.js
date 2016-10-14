@@ -49,7 +49,7 @@ export default class Carousel extends React.Component {
             <div class="carousel">
 
                 <div class="carousel-navigation">
-                    <ul>{carouselNavigation}</ul>
+                    {carouselNavigation}
                 </div>
 
                 <Slider {...settings} ref="slider">

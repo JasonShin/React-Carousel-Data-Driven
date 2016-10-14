@@ -2,5 +2,6 @@
  * Created by Shin on 12/10/2016.
  */
 module.exports = {
-    MAX_NAVIGATION: 7
+    pageWith: 55,
+    PAGE_TO_WAIT: 3
 };

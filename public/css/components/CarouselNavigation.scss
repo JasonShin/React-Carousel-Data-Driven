@@ -1,35 +1,49 @@
+@import "../settings/animation";
 
 .carousel-navigation {
   background-color: $pink;
   text-align: center;
 
-  ul {
+  > div {
     display: inline-block;
     padding: 20px;
     position: relative;
+  }
 
-    .carousel-navigation-default {
-      position: absolute;
-      top: 38px;
-      width: 5%;
-      font-size: 20px;
-      color: $white;
-      cursor: pointer;
+
+  .carousel-navigation-default {
+    position: absolute;
+    top: 38px;
+    width: 5%;
+    font-size: 20px;
+    color: $white;
+    cursor: pointer;
+  }
+
+  .carousel-navigation-left {
+    @extend .carousel-navigation-default;
+    left: 0px;
+
+  }
+
+  .carousel-navigation-right {
+    @extend .carousel-navigation-default;
+    right: 0px;
+  }
+
+  .carousel-navigation-items {
+    margin: 0px auto;
+    width: 385px;
+    height: 55px;
+    overflow: hidden;
+
+    >div {
+      overflow: hidden;
+      @extend .ease;
     }
 
-    .carousel-navigation-left {
-      @extend .carousel-navigation-default;
-      left: 0px;
-
-    }
-
-    .carousel-navigation-right {
-      @extend .carousel-navigation-default;
-      right: 0px;
-    }
-
-    .carousel-navigation-items {
-      margin: 0px auto;
+    ul {
+      overflow: hidden;
 
       li {
         position: relative;
@@ -59,58 +73,59 @@
 
       }
 
-      .below-current-index {
-        > span {
-          background-color: $green;
-          margin-top: 15px;
-        }
-        .carousel-navigation-line {
-          position: absolute;
-          width: 50%;
-          top: 50%;
-          border-bottom: 3px solid $green;
-          height:1px;
-          right: 0px;
-        }
-      }
-
-      .current-index {
-
-
-        > span {
-          background-color: $green;
-          box-shadow: 0 0 0 3px $green;
-          border: 3px solid $pink;
-          margin-left: 3px;
-          margin-top: 10px;
-        }
-
-        .carousel-navigation-line {
-          position: absolute;
-          width: 50%;
-          top: 50%;
-          border-bottom: 3px solid $green;
-          height:1px;
-          right: 0px;
-        }
-      }
-
-      .after-current-index {
-        > span {
-          border: 1px solid $white;
-          margin-top: 14px;
-        }
-
-        .carousel-navigation-line {
-          position: absolute;
-          width: 43%;
-          top: 50%;
-          border-bottom: 1px solid $white;
-          height:1px;
-          right: 0px;
-        }
-      }
-
     }
+
+    .below-current-index {
+      > span {
+        background-color: $green;
+        margin-top: 15px;
+      }
+      .carousel-navigation-line {
+        position: absolute;
+        width: 48%;
+        top: 50%;
+        border-bottom: 3px solid $green;
+        height:1px;
+        right: 0px;
+      }
+    }
+
+    .current-index {
+
+
+      > span {
+        background-color: $green;
+        box-shadow: 0 0 0 3px $green;
+        border: 3px solid $pink;
+        margin-left: 3px;
+        margin-top: 10px;
+      }
+
+      .carousel-navigation-line {
+        position: absolute;
+        width: 47%;
+        top: 50%;
+        border-bottom: 3px solid $green;
+        height:1px;
+        right: 0px;
+      }
+    }
+
+    .after-current-index {
+      > span {
+        border: 1px solid $white;
+        margin-top: 14px;
+      }
+
+      .carousel-navigation-line {
+        position: absolute;
+        width: 43%;
+        top: 50%;
+        border-bottom: 1px solid $white;
+        height:1px;
+        right: 0px;
+      }
+    }
+
   }
 }

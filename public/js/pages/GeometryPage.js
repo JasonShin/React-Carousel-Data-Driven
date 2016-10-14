@@ -12,7 +12,6 @@ export default class GeometryPage extends React.Component {
 
     constructor() {
         super();
-
     }
 
     componentWillMount(){
