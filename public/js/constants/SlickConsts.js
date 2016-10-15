@@ -15,9 +15,9 @@ module.exports = {
             infinite: false
         }
     }, {
-        breakpoint: 875,
+        breakpoint: 775,
         settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             infinite: false
         }
     }, {

@@ -1,4 +1,5 @@
 @import "../settings/colours";
+@import "../settings/media-breakpoints";
 
 .slide-item {
   position: relative;
@@ -7,6 +8,11 @@
   margin-right: 20px;
   padding-bottom: 40px;
   box-shadow: 0 0 5px #ccc;
+
+  @media all and (max-width: $width-mobile) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
   .slide-background {
     position: absolute;
@@ -31,8 +37,15 @@
 
       h3 {
         font-size: 24px;
+
+        @media all and (max-width: $width-mobile) {
+          font-size: 16px;
+        }
+
       }
+
     }
+
   }
 
   .lets-go-button {

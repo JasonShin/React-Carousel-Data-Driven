@@ -1,4 +1,7 @@
 @import "../settings/animation";
+@import "../settings/media-breakpoints";
+
+$numbers_width_desktop: 385px;
 
 .carousel-navigation {
   background-color: $pink;
@@ -8,7 +11,13 @@
     display: inline-block;
     padding: 20px;
     position: relative;
+
+    //Inner container wrapper is reduced to 80% to make sure it is not overlapping spaces created by padding
+    @media all and (max-width: $width-mobile) {
+      width: 80%;
+    }
   }
+
 
 
   .carousel-navigation-default {
@@ -33,9 +42,14 @@
 
   .carousel-navigation-items {
     margin: 0px auto;
-    width: 385px;
+    width: $numbers_width_desktop;
     height: 55px;
     overflow: hidden;
+
+    //Numbers wrapper is reduced to 90% to make sure it is not overlapping spaces created by padding
+    @media all and (max-width: $width-mobile) {
+      width: 90%;
+    }
 
     >div {
       overflow: hidden;

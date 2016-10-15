@@ -66,9 +66,8 @@ export default class CarouselNavigation extends React.Component {
 
         var innerPageWrapperWidth = CarouselNavigationCosts.pageWith * subtopics.length;
         var innerPageStyle = {
-            width: innerPageWrapperWidth + 'px'
+            width: innerPageWrapperWidth
         };
-
 
         if(currentIndex > CarouselNavigationCosts.PAGE_TO_WAIT && currentIndex < subtopics.length){
             let marginLeft = -1*CarouselNavigationCosts.pageWith*(currentIndex - CarouselNavigationCosts.PAGE_TO_WAIT);
