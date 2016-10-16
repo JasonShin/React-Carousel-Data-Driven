@@ -4,7 +4,7 @@
   "description": "Code challenge",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base public/ --inline --port 8181 --hot --watch",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base ./ --inline --port 8181 --hot --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
