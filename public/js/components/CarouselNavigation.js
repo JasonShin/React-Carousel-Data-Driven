@@ -15,6 +15,11 @@ export default class CarouselNavigation extends React.Component {
         };
     }
 
+    /**
+     * When carousel navigation such as 1,2,3,4,5 is clicked
+     * @param index
+     * @param e
+     */
     onNavClick(index, e) {
         e.preventDefault();
         this.props.onIndexNavigationClick(index);
@@ -23,6 +28,10 @@ export default class CarouselNavigation extends React.Component {
         });
     }
 
+    /**
+     * When carousel navigation left is click.
+     * @param e
+     */
     onNavLeftClick(e) {
 
         if(this.state.currentIndex > 0) {
@@ -34,6 +43,10 @@ export default class CarouselNavigation extends React.Component {
         }
     }
 
+    /**
+     * When carousel navigation right is clicked
+     * @param e
+     */
     onNavRightClick(e) {
         if(this.state.currentIndex < this.props.subtopics.length - 1) {
             let nextIndex = this.state.currentIndex + 1;
@@ -45,6 +58,12 @@ export default class CarouselNavigation extends React.Component {
         }
     }
 
+    /**
+     * Factory pattern to build pagination components
+     * @param subtopics
+     * @param currentIndex
+     * @returns {XML}
+     */
     buildPagination(subtopics, currentIndex) {
         const carouselNavigation = subtopics.map( (subtopic, index) => {
             let navClass = '';
@@ -81,8 +100,6 @@ export default class CarouselNavigation extends React.Component {
             </div>
         );
     }
-
-
 
     render() {
         const {subtopics, incomingIndex} = this.props;

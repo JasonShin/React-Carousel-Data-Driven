@@ -22,16 +22,29 @@ export default class Carousel extends React.Component {
         SlickConsts['afterChange'] = this.onSliderSwipe.bind(this);
     }
 
+    /**
+     * When swipes on slide, event fires
+     * @param index
+     */
     onSliderSwipe(index) {
         this.setState({
             carouselIndex: index
         });
     }
 
+    /**
+     * When each slide is clicked
+     * @param index
+     */
     onIndexNavigationClick(index) {
         this.refs.slider.slickGoTo(index);
     }
 
+    /**
+     * Build slide items
+     * @param subtopics
+     * @returns {*}
+     */
     getSlideItems(subtopics) {
         return subtopics.map(subtopic => {
             return (<div key={subtopic.index}><Slide subtopic={subtopic} /></div>)

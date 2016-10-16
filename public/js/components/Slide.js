@@ -7,13 +7,16 @@ import {observer} from 'mobx-react';
 @observer
 export default class Slide extends React.Component {
 
+    /**
+     * When let's go is clicked, it triggers completed field
+     * @param e
+     */
     onLetGoClick(e) {
         e.preventDefault();
         this.props.subtopic.completed = true;
     }
 
     render() {
-
         const {subtopic} = this.props;
 
         let tickBox = '';
@@ -23,7 +26,7 @@ export default class Slide extends React.Component {
         } else {
             tickBox = (<i class="fa fa-times incomplete" aria-hidden="true"></i>);
         }
-
+        
         return (
             <div class="slide-item">
 
