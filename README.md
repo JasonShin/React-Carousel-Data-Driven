@@ -2,6 +2,8 @@
 
 Example is available at: https://jasonshin.github.io/React-Carousel-Data-Driven/
 
+Compatible browser: Chrome
+
 # Features to highlight:
 * Responsive carousel that works on all device resolutions include mobile, tablet, and desktop
 * High performance carousel
