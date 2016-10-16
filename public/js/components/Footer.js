@@ -3,11 +3,14 @@
  */
 import React from 'react';
 export default class Footer extends React.Component {
+
+    
+
     render() {
         return (
             <div id="Footer">
                 <div>
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/378995/piechart@2x.png" />
+                    <span>Add</span>
                 </div>
 
                 <div>
