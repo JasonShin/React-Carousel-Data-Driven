@@ -26,7 +26,7 @@ export default class Slide extends React.Component {
         } else {
             tickBox = (<i class="fa fa-times incomplete" aria-hidden="true"></i>);
         }
-        
+
         return (
             <div class="slide-item">
 

@@ -16,3 +16,11 @@ Example is available at: https://jasonshin.github.io/React-Carousel-Data-Driven/
 * Mobx (State management)
 * getmdl.io (lightweight Materials Design component)
 * react-Slick
+
+# Build
+
+```
+npm install
+wepack --watch //watches file change
+npm run dev //launched webpack dev server
+```
