@@ -8,14 +8,15 @@ export default class Footer extends React.Component {
 
     ADD_NEW_LABEL = 'Add new';
     CLOSE_DIALOG = 'Close dialog';
-    ADD_NEW_ERROR = 'Title be an empty string';
+    ADD_NEW_ERROR = (<div class="add_new_errors">Title cannot be an empty string</div>);
+    ADD_NEW_SUCCESS = (<div class="add_new_success">Successfully added new!</div>);
 
     constructor() {
         super();
         this.state = {
             showAddNewField: -500,
             addNewTriggerLabel: this.ADD_NEW_LABEL,
-            addNewError: ''
+            addNewMessage: ''
         };
     }
 
@@ -28,8 +29,12 @@ export default class Footer extends React.Component {
 
         if(!GeometryStore.addNew(newSubtopic)) {
             this.setState({
-                addNewError: this.ADD_NEW_ERROR
+                addNewMessage: this.ADD_NEW_ERROR
             });
+        } else {
+            this.setState({
+                addNewMessage: this.ADD_NEW_SUCCESS
+            })
         }
     }
 
@@ -47,10 +52,12 @@ export default class Footer extends React.Component {
 
     onClickDialogClose(e) {
         e.preventDefault();
-        console.log('yoyo! closing');
         this.closeAddNew();
     }
 
+    /**
+     * Closing the add dialog
+     */
     closeAddNew() {
         this.setState({
             showAddNewField: -500,
@@ -58,8 +65,10 @@ export default class Footer extends React.Component {
         });
     }
 
+    /**
+     * Opening the add dialog
+     */
     openAddNew() {
-        console.log('invoked close add new!');
         this.setState({
             showAddNewField: 0,
             addNewTriggerLabel: this.CLOSE_DIALOG,
@@ -69,8 +78,7 @@ export default class Footer extends React.Component {
 
 
     render() {
-        const {showAddNewField, addNewTriggerLabel, addNewError} = this.state;
-        console.log(showAddNewField);
+        const {showAddNewField, addNewTriggerLabel, addNewMessage} = this.state;
         var addContainerStyle = {
             marginBottom: showAddNewField
         };
@@ -80,7 +88,7 @@ export default class Footer extends React.Component {
 
                 <div style={addContainerStyle} id="AddNewContainer">
                     <div>
-                        <div class="add_new_errors">{addNewError}</div>
+                        {addNewMessage}
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="TopicTitle" ref={c => this.topicTitleField = c} />
                             <label class="mdl-textfield__label" for="TopicTitle">Title</label>
