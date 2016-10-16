@@ -1,5 +1,7 @@
 # Data driven carousel example in React.js and CSS3
 
+Example is available at: https://jasonshin.github.io/React-Carousel-Data-Driven/
+
 # Features to highlight:
 * Responsive carousel that works on all device resolutions include mobile, tablet, and desktop
 * High performance carousel
