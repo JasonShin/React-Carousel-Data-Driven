@@ -1,6 +1,3 @@
-/**
- * Created by Shin on 12/10/2016.
- */
 import React from 'react';
 import Slider from 'react-slick';
 import {observer} from 'mobx-react';
@@ -8,6 +5,9 @@ import SlickConsts from '../constants/SlickConsts';
 import Slide from './Slide';
 import CarouselNavigation from './CarouselNavigation';
 
+/**
+ * Data Driven carousel component that uses data from GeometryStore
+ */
 @observer
 export default class Carousel extends React.Component {
 

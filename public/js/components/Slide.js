@@ -1,9 +1,9 @@
-/**
- * Created by Shin on 12/10/2016.
- */
 import React from 'react';
 import {observer} from 'mobx-react';
 
+/**
+ * Component representation of individual slide. Supports title, completed, index fields
+ */
 @observer
 export default class Slide extends React.Component {
 

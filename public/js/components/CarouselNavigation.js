@@ -1,9 +1,10 @@
-/**
- * Created by Shin on 12/10/2016.
- */
 import React from 'react';
 import CarouselNavigationCosts from '../constants/CarouselNavigationConsts';
 
+/**
+ * Carousel navigation component that moves dynamically according to current index.
+ * Animation uses CSS3
+ */
 export default class CarouselNavigation extends React.Component {
 
     constructor() {

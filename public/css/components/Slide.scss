@@ -7,7 +7,7 @@
   margin-left: 20px;
   margin-right: 20px;
   padding-bottom: 40px;
-  box-shadow: 0 0 5px #ccc;
+  box-shadow: $box-shadow;
 
   @media all and (max-width: $width-mobile) {
     margin-left: 10px;

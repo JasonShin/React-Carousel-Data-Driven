@@ -1,4 +1,5 @@
 @import "../settings/colours";
+@import "../settings/animation";
 
 #Footer {
   position: fixed;
@@ -24,6 +25,43 @@
 
   > div:first-child {
     min-height: 54px;
+  }
+
+  .footer-addNew {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+
+#AddNewContainer {
+  width: 300px;
+  position: fixed;
+  bottom: 80px;
+  margin: 0px auto;
+  left: 50%;
+  margin-left: -150px;
+  background-color: white;
+  box-shadow: $box-shadow;
+  @extend .ease;
+  margin-bottom: -500px;
+
+  > div {
+    padding: 20px;
+    >div {
+      display: block;
+    }
+  }
+
+  .addNewButtonWrapper {
+    padding-top: 10px;
+    > button {
+      margin-right: 10px;
+    }
+  }
+
+  .add_new_errors {
+    color: red;
   }
 
 }

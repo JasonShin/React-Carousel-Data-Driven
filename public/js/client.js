@@ -11,4 +11,7 @@ import GeometryPage from './pages/GeometryPage'
  */
 import '../css/style.scss';
 
+/**
+ * Rendering page to app root
+ */
 ReactDOM.render(<GeometryPage></GeometryPage>, document.getElementById('app'));

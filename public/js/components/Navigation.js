@@ -1,13 +1,12 @@
-/**
- * Created by Shin on 12/10/2016.
- */
 import React from 'react';
 import ImageResponsive, {Source} from 'react-image-responsive';
 
+/**
+ * Navigation component generally located on the head of each page
+ */
 export default class Navigation extends React.Component {
 
     render() {
-
         const {title} = this.props;
 
         return (

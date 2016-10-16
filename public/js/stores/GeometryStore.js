@@ -1,8 +1,8 @@
-/**
- * Created by Shin on 12/10/2016.
- */
 import {observable} from 'mobx';
 
+/**
+ * Data driven Geometry store. Supports automatic state management
+ */
 class GeometryStore {
     @observable topic = '';
     @observable subtopics = [];
@@ -10,7 +10,6 @@ class GeometryStore {
 
     fetchGeometries() {
         this.topic = 'Geometry';
-
         this.subtopics = [
             { index: 1, title: 'Triangles', completed: true },
             { index: 2, title: 'Angle Sum', completed: true },
@@ -23,6 +22,17 @@ class GeometryStore {
             { index: 9, title: 'Revision', completed: false },
             { index: 10, title: 'Revision', completed: false }
         ];
+    }
+
+    addNew(subtopic) {
+        if(subtopic.title === '' || subtopic.title === undefined) {
+            //Failed to add new subtopic
+            return false;
+        }
+        subtopic['index'] = this.subtopics.length + 1;
+        this.subtopics.push(subtopic);
+        //Successfully added new subtopic
+        return true;
     }
 
 }
