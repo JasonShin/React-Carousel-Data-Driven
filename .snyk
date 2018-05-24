@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - react-image-responsive > babel > babel-core > minimatch:
+        patched: '2018-05-24T06:03:54.062Z'
+    - react-image-responsive > babel-jest > babel-core > minimatch:
+        patched: '2018-05-24T06:03:54.062Z'
