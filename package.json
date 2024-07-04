@@ -33,9 +33,9 @@
     "react-dom": "^15.3.2",
     "react-image-responsive": "^1.0.18",
     "react-slick": "^0.14.5",
-    "sass-loader": "^4.0.0",
+    "sass-loader": "^6.0.7",
     "style-loader": "^0.13.1",
-    "webpack": "^1.12.9",
+    "webpack": "^4.0.0",
     "webpack-dev-server": "^1.14.1"
   }
 }
